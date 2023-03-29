@@ -13,7 +13,7 @@ def show_pic(img):
     plt.show()
 
 # Load Yolo
-net = cv2.dnn.readNet("yolov3_training_last_dataset_qxn_1_hour.weights", "yolov3_testing.cfg")
+net = cv2.dnn.readNet("yolov3_training_last_1_hour.weights", "yolov3_testing.cfg")
 
 # Name custom object
 classes = ["Woman"]
@@ -84,11 +84,13 @@ for img_path in images_path:
 
 
     show_pic(img)
-    key = cv2.waitKey(0)
+    # break
+    
     
 # Show picture by cv2 
     
     # cv2.imshow("Image", img)
+    # key = cv2.waitKey(0)
     # print(img)
     # break
 # cv2.destroyAllWindows()
